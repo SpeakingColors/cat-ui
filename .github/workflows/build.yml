@@ -27,6 +27,8 @@ jobs:
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCAT_UI_BUILD_DEMO=ON 2>&1 | tee -a ci.log; exit ${PIPESTATUS[0]}
       - name: Build
         run: cmake --build build --config Release --parallel 4 2>&1 | tee -a ci.log; exit ${PIPESTATUS[0]}
+      - name: FX tests (reverbs, shimmer, delay)
+        run: c++ -std=c++17 -O1 -Iinclude -o catfx_test tests/catfx_test.cpp && ./catfx_test
       - uses: actions/upload-artifact@v4
         with:
           name: CatUiDemo-${{ runner.os }}

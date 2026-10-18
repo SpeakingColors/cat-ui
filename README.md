@@ -39,3 +39,10 @@ Early alpha. Free and open source. Donations welcome (link coming).
 AGPL-3.0-or-later, see [LICENSE](LICENSE).
 
 Not affiliated with or endorsed by any hardware maker named here. All trademarks belong to their owners.
+
+## catfx: shared effects (header-only)
+
+`#include <catfx/Fx.h>` gives synths and instruments a built-in FX rack: shimmer delay into reverb
+(plate, hall, shimmer plate, shimmer hall). Pure C++, no allocation after `prepare()`.
+Algorithms follow public literature: Dattorro plate (JAES 1997), feedback delay network hall, two-head pitch shifter.
+Tests: `tests/catfx_test.cpp`.
