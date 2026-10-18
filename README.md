@@ -10,6 +10,15 @@ FetchContent_MakeAvailable(cat_ui)
 target_link_libraries(MyApp PRIVATE cat_ui)
 ```
 
+## Render gate (pause visuals when hidden)
+`catui::RenderGate` runs meters, scopes, lights and animations only while the window is showing and the app is in front. Audio, automation and MIDI keep running.
+```cpp
+catui::RenderGate gate{ *this };
+gate.onFrame = [this] { scope.repaint(); };
+gate.start(30);
+```
+Every cat plugin should draw through it.
+
 ## Build the demo
 ```
 cmake -S . -B build -DCAT_UI_BUILD_DEMO=ON

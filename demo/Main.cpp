@@ -1,11 +1,15 @@
 #include <juce_gui_basics/juce_gui_basics.h>
 #include "catui/CatFrame.h"
+#include "catui/RenderGate.h"
 
 class DemoContent : public juce::Component
 {
 public:
     DemoContent()
     {
+        // Moving scope line: only animates while the window is visible and in front.
+        gate.onFrame = [this] { phase += 0.08f; repaint(scopeArea); };
+        gate.start(30);
         for (auto& k : knobs)
         {
             k.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
@@ -18,9 +22,28 @@ public:
     {
         auto r = getLocalBounds().reduced(16);
         const int w = r.getWidth() / 4;
-        for (auto& k : knobs) k.setBounds(r.removeFromLeft(w).withHeight(w));
+        auto top = r.removeFromTop(w);
+        for (auto& k : knobs) k.setBounds(top.removeFromLeft(w).withHeight(w));
+        scopeArea = r.reduced(0, 8);
+    }
+    void paint(juce::Graphics& g) override
+    {
+        g.setColour(juce::Colour(0xff050607));
+        g.fillRect(scopeArea);
+        juce::Path p;
+        const auto a = scopeArea.toFloat();
+        for (int x = 0; x < scopeArea.getWidth(); ++x)
+        {
+            const float y = a.getCentreY() - std::sin(phase + (float) x * 0.05f) * a.getHeight() * 0.4f;
+            if (x == 0) p.startNewSubPath(a.getX(), y); else p.lineTo(a.getX() + (float) x, y);
+        }
+        g.setColour(juce::Colour(0xffcfe3ff));
+        g.strokePath(p, juce::PathStrokeType(1.6f));
     }
 private:
+    catui::RenderGate gate{ *this };
+    juce::Rectangle<int> scopeArea;
+    float phase = 0.0f;
     juce::Slider knobs[4];
 };
 
