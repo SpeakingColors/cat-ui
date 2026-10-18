@@ -1,0 +1,53 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1")
+-- Checking for module 'alsa'
+--   Found alsa, version 1.2.11
+-- Checking for modules 'freetype2;fontconfig'
+--   Found freetype2, version 26.1.20
+--   Found fontconfig, version 2.15.0
+-- Checking for module 'gl'
+--   Found gl, version 1.2
+-- Checking for module 'libcurl'
+--   Package 'libcurl', required by 'virtual:world', not found
+-- Checking for modules 'webkit2gtk-4.0;gtk+-x11-3.0'
+--   Package 'webkit2gtk-4.0', required by 'virtual:world', not found
+--   Package 'gtk+-x11-3.0', required by 'virtual:world', not found
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Testing juceaide
+-- Finished setting up juceaide
+-- Configuring done (92.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/runner/work/cat-ui/cat-ui/build
+[  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
+[  6%] Building CXX object CMakeFiles/cat_ui.dir/src/CatFrame.cpp.o
+[ 10%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 13%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
+[ 17%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+[ 20%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
+[ 24%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
+[ 27%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.cpp.o
+[ 31%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+[ 34%] Building C object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+[ 37%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_events/juce_events.cpp.o
+[ 41%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_core/juce_core.cpp.o
+/home/runner/work/cat-ui/cat-ui/build/_deps/juce-src/modules/juce_core/juce_core.cpp:104:13: fatal error: curl/curl.h: No such file or directory
+  104 |    #include <curl/curl.h>
+      |             ^~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/cat_ui.dir/build.make:233: CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_core/juce_core.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:173: CMakeFiles/cat_ui.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
