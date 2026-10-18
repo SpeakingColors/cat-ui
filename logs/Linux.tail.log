@@ -28,13 +28,13 @@
 -- Exporting juceaide
 -- Testing juceaide
 -- Finished setting up juceaide
--- Configuring done (87.3s)
+-- Configuring done (61.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/runner/work/cat-ui/cat-ui/build
 [  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
 [  6%] Building CXX object CMakeFiles/cat_ui.dir/src/CatFrame.cpp.o
-[ 10%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
-[ 13%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 10%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 13%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
 [ 17%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
 [ 20%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
 [ 24%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
@@ -49,8 +49,8 @@
 [ 51%] Built target cat_ui
 [ 55%] Building CXX object CMakeFiles/CatUiDemo.dir/demo/Main.cpp.o
 [ 58%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
-[ 62%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
 [ 65%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+[ 65%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
 [ 68%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
 [ 72%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
 [ 75%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.cpp.o
