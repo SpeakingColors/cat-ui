@@ -1,5 +1,7 @@
 # cat-ui 🐈
 
+<img src="assets/icon.svg" width="96" align="right" alt="icon">
+
 Shared look and feel for all the cat plugins (JUCE): wood side cheeks, knobs, header with info, settings and "reset to 100%", resizable from every corner and edge with locked aspect ratio.
 
 ## Use it
