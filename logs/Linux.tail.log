@@ -28,7 +28,7 @@
 -- Exporting juceaide
 -- Testing juceaide
 -- Finished setting up juceaide
--- Configuring done (73.3s)
+-- Configuring done (87.5s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/runner/work/cat-ui/cat-ui/build
 [  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
@@ -61,6 +61,6 @@
 [ 93%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_core/juce_core_CompilationTime.cpp.o
 [ 96%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.cpp.o
 [100%] Linking CXX executable CatUiDemo_artefacts/Release/CatUiDemo
-lto-wrapper: warning: using serial compilation of 62 LTRANS jobs
+lto-wrapper: warning: using serial compilation of 63 LTRANS jobs
 lto-wrapper: note: see the ‘-flto’ option documentation for more information
 [100%] Built target CatUiDemo
