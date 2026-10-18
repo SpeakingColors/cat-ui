@@ -28,7 +28,7 @@
 -- Exporting juceaide
 -- Testing juceaide
 -- Finished setting up juceaide
--- Configuring done (87.4s)
+-- Configuring done (74.2s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/runner/work/cat-ui/cat-ui/build
 [  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
@@ -48,8 +48,8 @@
 [ 51%] Linking CXX static library libcat_ui.a
 [ 51%] Built target cat_ui
 [ 55%] Building CXX object CMakeFiles/CatUiDemo.dir/demo/Main.cpp.o
-[ 58%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
-[ 62%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 58%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 65%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
 [ 65%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
 [ 68%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
 [ 72%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
