@@ -28,13 +28,13 @@
 -- Exporting juceaide
 -- Testing juceaide
 -- Finished setting up juceaide
--- Configuring done (92.1s)
+-- Configuring done (73.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/runner/work/cat-ui/cat-ui/build
 [  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
 [  6%] Building CXX object CMakeFiles/cat_ui.dir/src/CatFrame.cpp.o
-[ 10%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
-[ 13%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
+[ 10%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
+[ 13%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
 [ 17%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
 [ 20%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
 [ 24%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
@@ -43,11 +43,24 @@
 [ 34%] Building C object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
 [ 37%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_events/juce_events.cpp.o
 [ 41%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_core/juce_core.cpp.o
-/home/runner/work/cat-ui/cat-ui/build/_deps/juce-src/modules/juce_core/juce_core.cpp:104:13: fatal error: curl/curl.h: No such file or directory
-  104 |    #include <curl/curl.h>
-      |             ^~~~~~~~~~~~~
-compilation terminated.
-gmake[2]: *** [CMakeFiles/cat_ui.dir/build.make:233: CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_core/juce_core.cpp.o] Error 1
-gmake[2]: *** Waiting for unfinished jobs....
-gmake[1]: *** [CMakeFiles/Makefile2:173: CMakeFiles/cat_ui.dir/all] Error 2
-gmake: *** [Makefile:136: all] Error 2
+[ 44%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_core/juce_core_CompilationTime.cpp.o
+[ 48%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.cpp.o
+[ 51%] Linking CXX static library libcat_ui.a
+[ 51%] Built target cat_ui
+[ 55%] Building CXX object CMakeFiles/CatUiDemo.dir/demo/Main.cpp.o
+[ 58%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
+[ 62%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 65%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+[ 68%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
+[ 72%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
+[ 75%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.cpp.o
+[ 79%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+[ 82%] Building C object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+[ 86%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_events/juce_events.cpp.o
+[ 89%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_core/juce_core.cpp.o
+[ 93%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_core/juce_core_CompilationTime.cpp.o
+[ 96%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.cpp.o
+[100%] Linking CXX executable CatUiDemo_artefacts/Release/CatUiDemo
+lto-wrapper: warning: using serial compilation of 62 LTRANS jobs
+lto-wrapper: note: see the ‘-flto’ option documentation for more information
+[100%] Built target CatUiDemo
