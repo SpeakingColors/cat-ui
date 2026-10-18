@@ -1,0 +1,23 @@
+#pragma once
+#include <juce_gui_basics/juce_gui_basics.h>
+
+namespace catui
+{
+// Custom cat head logo per FX plugin (same art as each repo's assets/icon.svg).
+// key: crusher, fatcat, spacer, meowbass, meowximizer
+inline std::unique_ptr<juce::Drawable> makeFxLogo(const juce::String& key)
+{
+    static const std::pair<const char*, const char*> svgs[] = {
+        { "crusher", R"SVG(<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="2" y="2" width="124" height="124" rx="24" fill="#0b0c0f" stroke="#FF1383" stroke-width="3"/><path d="M24 62 L28 22 L54 42 L74 42 L100 22 L104 62 Q106 94 64 108 Q22 94 24 62Z" fill="#FF1383"/><path d="M30 30 L36 24 L40 32 L34 40Z" fill="#FFE5EE"/><path d="M36 58 L58 66 L56 74 L38 70Z" fill="#111111"/><path d="M92 58 L70 66 L72 74 L90 70Z" fill="#111111"/><path d="M34 50 L58 58 M94 50 L70 58" stroke="#111111" stroke-width="4" stroke-linecap="round"/><path d="M40 88 L47 98 L54 88 L61 98 L68 88 L75 98 L82 88 L88 94" stroke="#111111" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/><path d="M14 40 L22 46 M12 56 L20 56 M114 40 L106 46 M116 56 L108 56" stroke="#FEE400" stroke-width="3" stroke-linecap="round"/></svg>)SVG" },
+        { "fatcat", R"SVG(<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="2" y="2" width="124" height="124" rx="24" fill="#0b0c0f" stroke="#FFA600" stroke-width="3"/><path d="M28 50 L32 20 L56 38 L72 38 L96 20 L100 50Z" fill="#FFA600"/><ellipse cx="64" cy="72" rx="48" ry="36" fill="#FFA600"/><path d="M58 40 L58 50 M64 38 L64 50 M70 40 L70 50" stroke="#F57F01" stroke-width="4" stroke-linecap="round"/><ellipse cx="34" cy="82" rx="10" ry="7" fill="#FF7BB1"/><ellipse cx="94" cy="82" rx="10" ry="7" fill="#FF7BB1"/><path d="M36 70 Q43 60 50 70 M78 70 Q85 60 92 70" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M56 82 Q60 90 64 82 Q68 90 72 82" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M10 74 L26 78 M10 86 L26 84 M118 74 L102 78 M118 86 L102 84" stroke="#FFD100" stroke-width="3" stroke-linecap="round"/></svg>)SVG" },
+        { "spacer", R"SVG(<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="2" y="2" width="124" height="124" rx="24" fill="#0b0c0f" stroke="#02EBBA" stroke-width="3"/><path d="M26 60 L30 22 L54 40 L74 40 L98 22 L102 60 Q104 96 64 106 Q24 96 26 60Z" fill="#02EBBA"/><circle cx="48" cy="60" r="7" fill="#111111"/><circle cx="80" cy="60" r="7" fill="#111111"/><circle cx="50" cy="58" r="2" fill="#BDF9EB"/><circle cx="82" cy="58" r="2" fill="#BDF9EB"/><path d="M30 82 L46 82 Q56 82 64 96 Q72 82 82 82 L98 82" stroke="#111111" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/><path d="M20 108 L20 98 M28 108 L28 92 M100 108 L100 92 M108 108 L108 98" stroke="#BDF9EB" stroke-width="3" stroke-linecap="round"/></svg>)SVG" },
+        { "meowbass", R"SVG(<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="2" y="2" width="124" height="124" rx="24" fill="#0b0c0f" stroke="#A43DFF" stroke-width="3"/><path d="M26 62 L30 22 L54 40 L74 40 L98 22 L102 62 Q104 98 64 108 Q24 98 26 62Z" fill="#A43DFF"/><circle cx="46" cy="62" r="15" fill="#111111"/><circle cx="46" cy="62" r="10" fill="#CD92FE"/><circle cx="46" cy="62" r="4" fill="#111111"/><circle cx="82" cy="62" r="15" fill="#111111"/><circle cx="82" cy="62" r="10" fill="#CD92FE"/><circle cx="82" cy="62" r="4" fill="#111111"/><path d="M44 90 Q50 80 56 90 T68 90 T80 90" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M8 50 Q14 64 8 78 M16 54 Q20 64 16 74 M120 50 Q114 64 120 78 M112 54 Q108 64 112 74" stroke="#E1CBF4" stroke-width="3" fill="none" stroke-linecap="round"/></svg>)SVG" },
+        { "meowximizer", R"SVG(<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="2" y="2" width="124" height="124" rx="24" fill="#0b0c0f" stroke="#6CC9F5" stroke-width="3"/><path d="M30 64 L34 26 L56 42 L72 42 L94 26 L98 64 Q100 98 64 108 Q28 98 30 64Z" fill="#6CC9F5"/><path d="M20 16 L108 16" stroke="#FEEF5E" stroke-width="3" stroke-dasharray="6 5"/><path d="M46 50 L49 59 L58 62 L49 65 L46 74 L43 65 L34 62 L43 59Z" fill="#111111"/><path d="M82 50 L85 59 L94 62 L85 65 L82 74 L79 65 L70 62 L79 59Z" fill="#111111"/><path d="M46 84 Q64 102 82 84Z" fill="#111111"/><path d="M6 62 L18 52 L18 72Z M122 62 L110 52 L110 72Z" fill="#FEEF5E"/></svg>)SVG" },
+    };
+    for (auto& s : svgs)
+        if (key == s.first)
+            if (auto xml = juce::parseXML(juce::String::fromUTF8(s.second)))
+                return juce::Drawable::createFromSVG(*xml);
+    return {};
+}
+}

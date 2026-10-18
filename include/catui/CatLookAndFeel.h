@@ -5,14 +5,14 @@
 
 namespace catui
 {
-// Palette shared by every cat plugin. Backgrounds stay dark charcoal; only controls and graph lines use the neon soda pop colours (SodaPop.h).
+// Palette shared by every cat plugin. Navy panels with neon soda pop controls (SodaPop.h).
 struct Colours
 {
     static juce::Colour wood()      { return juce::Colour(0xff5a3a24); }
     static juce::Colour woodDark()  { return juce::Colour(0xff3b2415); }
     static juce::Colour woodLight() { return juce::Colour(0xff7a5236); }
-    static juce::Colour panel()     { return juce::Colour(0xff131519); }
-    static juce::Colour panelLight(){ return juce::Colour(0xff1e2128); }
+    static juce::Colour panel()     { return juce::Colour(0xff161638); }
+    static juce::Colour panelLight(){ return SodaPop::popNavy(); }
     static juce::Colour text()      { return juce::Colour(0xffe8e6e1); }
     static juce::Colour dim()       { return juce::Colour(0xff9a9690); }
     static juce::Colour accent()    { return SodaPop::amber(); }
