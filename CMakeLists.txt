@@ -18,6 +18,7 @@ add_library(cat_ui STATIC src/CatLookAndFeel.cpp src/CatFrame.cpp)
 add_library(cat_ui::cat_ui ALIAS cat_ui)
 target_include_directories(cat_ui PUBLIC include)
 target_compile_features(cat_ui PUBLIC cxx_std_17)
+target_compile_definitions(cat_ui PUBLIC JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 JUCE_STANDALONE_APPLICATION=1)
 target_link_libraries(cat_ui PUBLIC
     juce::juce_gui_basics
     juce::juce_graphics
