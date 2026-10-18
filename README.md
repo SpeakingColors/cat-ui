@@ -29,6 +29,10 @@ GitHub Actions builds it on Linux, Windows and macOS on every push.
 ## Status
 Early alpha. Free and open source. Donations welcome (link coming).
 
+## Docs
+- [Interactive mockups](docs/README.md)
+- [Roadmap](ROADMAP.md)
+
 ## License
 AGPL-3.0-or-later, see [LICENSE](LICENSE).
 
