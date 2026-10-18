@@ -8,6 +8,8 @@ CatLookAndFeel::CatLookAndFeel()
     setColour(juce::Label::textColourId, Colours::text());
     setColour(juce::TextButton::buttonColourId, Colours::panelLight());
     setColour(juce::TextButton::textColourOffId, Colours::text());
+    setColour(juce::TextButton::buttonOnColourId, SodaPop::violet());   // switched-on buttons are purple
+    setColour(juce::TextButton::textColourOnId, juce::Colours::white);
     setColour(juce::Slider::rotarySliderFillColourId, Colours::accent());
     setColour(juce::Slider::rotarySliderOutlineColourId, Colours::woodDark());
 }
