@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(cat_ui VERSION 0.1.0 LANGUAGES CXX)
+project(cat_ui VERSION 0.1.0 LANGUAGES C CXX)
 
 # cat-ui: shared look and feel for the cat plugins (JUCE).
 # Use from another project:
