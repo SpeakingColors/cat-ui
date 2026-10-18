@@ -16,7 +16,7 @@
 -- Exporting juceaide
 -- Testing juceaide
 -- Finished setting up juceaide
--- Configuring done (127.4s)
+-- Configuring done (105.2s)
 -- Generating done (0.1s)
 CMake Warning (unused-cli):
   Manually-specified variables were not used by the project:
