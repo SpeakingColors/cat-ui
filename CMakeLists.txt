@@ -28,7 +28,7 @@ target_link_libraries(cat_ui PUBLIC
     juce::juce_recommended_warning_flags)
 
 if(CAT_UI_BUILD_DEMO)
-    juce_add_gui_app(CatUiDemo PRODUCT_NAME "CatUiDemo" COMPANY_NAME "SpeakingColors")
+    juce_add_gui_app(CatUiDemo PRODUCT_NAME "CatUiDemo" COMPANY_NAME "Studio 87")
     target_sources(CatUiDemo PRIVATE demo/Main.cpp)
     target_compile_definitions(CatUiDemo PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0
         JUCE_APPLICATION_NAME_STRING="CatUiDemo" JUCE_APPLICATION_VERSION_STRING="0.1.0")
