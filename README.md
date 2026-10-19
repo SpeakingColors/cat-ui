@@ -29,7 +29,13 @@ cmake --build build --config Release
 GitHub Actions builds it on Linux, Windows and macOS on every push.
 
 ## Status
-Early alpha. Free and open source. Donations welcome: https://ko-fi.com/studio87
+Early alpha.
+
+<p align="center">
+  <a href="https://ko-fi.com/studio87"><img src="https://img.shields.io/badge/Support_Studio_87-on_Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white" alt="Support Studio 87 on Ko-fi"></a>
+</p>
+
+☕ Free and open source, made by one person. If it helps your music, a coffee on [Ko-fi](https://ko-fi.com/studio87) keeps it coming. 💜
 
 ## Docs
 - [Interactive mockups](docs/README.md)
