@@ -37,7 +37,7 @@ Call Stack (most recent call first):
   CMakeLists.txt:31 (juce_add_gui_app)
 
 
--- Configuring done (94.6s)
+-- Configuring done (87.7s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/runner/work/cat-ui/cat-ui/build
 [  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
