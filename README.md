@@ -29,7 +29,7 @@ cmake --build build --config Release
 GitHub Actions builds it on Linux, Windows and macOS on every push.
 
 ## Status
-Early alpha. Free and open source. Donations welcome (link coming).
+Early alpha. Free and open source. Donations welcome: https://ko-fi.com/studio87
 
 ## Docs
 - [Interactive mockups](docs/README.md)
