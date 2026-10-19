@@ -25,7 +25,7 @@ Call Stack (most recent call first):
   CMakeLists.txt:31 (juce_add_gui_app)
 
 
--- Configuring done (121.6s)
+-- Configuring done (124.6s)
 -- Generating done (0.1s)
 CMake Warning (unused-cli):
   Manually-specified variables were not used by the project:
