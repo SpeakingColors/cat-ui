@@ -48,17 +48,25 @@ void CatLookAndFeel::drawButtonBackground(juce::Graphics& g, juce::Button& b, co
     g.drawRoundedRectangle(r, 4.0f, 1.0f);
 }
 
+void drawWood(juce::Graphics& g, juce::Rectangle<int> r)
+{
+    // The PurrOne wood: dark to warm to mid brown across the width, plus fixed-seed vertical grain (no shimmer on repaint).
+    juce::ColourGradient cg(juce::Colour(0xff3d2210), (float) r.getX(), 0.0f, juce::Colour(0xff3d2210), (float) r.getRight(), 0.0f, false);
+    cg.addColour(0.4, juce::Colour(0xff7b4a26)); cg.addColour(0.75, juce::Colour(0xff5a3419));
+    g.setGradientFill(cg); g.fillRect(r);
+    juce::Random rnd(7);
+    for (int x = r.getX(); x < r.getRight(); x += 2)
+    {
+        g.setColour(juce::Colour::fromFloatRGBA(0.f, 0.f, 0.f, 0.05f + 0.20f * rnd.nextFloat()));
+        const float wob = rnd.nextFloat() * 2.0f;
+        g.drawLine((float) x + wob, (float) r.getY(), (float) x - wob, (float) r.getBottom(), 1.0f);
+    }
+    g.setColour(juce::Colours::black.withAlpha(0.45f)); g.drawRect(r, 1);
+}
+
 void drawWoodCheeks(juce::Graphics& g, juce::Rectangle<int> bounds, int cw)
 {
-    for (int side = 0; side < 2; ++side)
-    {
-        auto r = side == 0 ? bounds.removeFromLeft(cw) : bounds.removeFromRight(cw);
-        g.setGradientFill(juce::ColourGradient(Colours::woodLight(), (float) r.getX(), 0.0f,
-                                               Colours::woodDark(), (float) r.getRight(), 0.0f, false));
-        g.fillRect(r);
-        g.setColour(Colours::woodDark().withAlpha(0.5f));
-        for (int y = r.getY() + 5; y < r.getBottom(); y += 9)
-            g.drawHorizontalLine(y, (float) r.getX(), (float) r.getRight());
-    }
+    drawWood(g, bounds.removeFromLeft(cw));
+    drawWood(g, bounds.removeFromRight(cw));
 }
 }

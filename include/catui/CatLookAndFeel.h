@@ -28,6 +28,7 @@ public:
                               bool highlighted, bool down) override;
 };
 
-// Draws the wood side cheeks. Call in paint() before children.
+// The PurrOne wood, the one look for every plugin and app. drawWood fills one rectangle; drawWoodCheeks draws both side cheeks. Call in paint() before children.
+void drawWood(juce::Graphics&, juce::Rectangle<int> area);
 void drawWoodCheeks(juce::Graphics&, juce::Rectangle<int> bounds, int cheekWidth);
 }

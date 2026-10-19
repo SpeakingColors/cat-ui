@@ -10,3 +10,6 @@ Rules learned in real testing. Keep adding to this list whenever a bug is fixed.
 - Band spectrum: dB range 0 to -100 (it was -120 to -30 and clipped the original at the top), fill under the original trace in the band colour at low alpha so the whole spectrum looks full, removed part in the strong band colour, dashed original on top.
 - Scaredy Cat crossover defaults are 160 Hz and 2.8 kHz (the reference plugin's defaults, the user's choice on 2026-10-19). Replaces 122.2659 and 1976.9132 in item 18. Old saved states keep their own crossover values.
 - Releases: the plugin version comes from the release tag (workflow edits project VERSION before cmake), so the gear menu, installer and GitHub release match; no manual version bump. Before any push, pull --rebase: other sessions push to the same repos (a Ko-fi link was added to scaredy-cat that way).
+
+## The wood panel (decided 2026-10-19)
+One wood for every plugin and app: the PurrOne wood (`catui::drawWood`, `drawWoodCheeks`): dark `#3d2210`, warm `#7b4a26` at 40%, mid `#5a3419` at 75%, fixed-seed vertical grain, thin black edge. Never draw a different wood; call the cat-ui function. Web mockups use the same three colours with a vertical grain.
