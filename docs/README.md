@@ -4,3 +4,5 @@ Interactive HTML mockups of cat-ui. Open any file in a browser, keep `support.js
 
 - [Settings](mockups/Settings.dc.html)
 - [SettingsMIDI](mockups/SettingsMIDI.dc.html)
+
+- [Design lessons](DESIGN-LESSONS.md): rules learned from real tests (level matching, repaint, labels, spectrum range). Add new fixes there.
