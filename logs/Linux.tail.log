@@ -28,13 +28,22 @@
 -- Exporting juceaide
 -- Testing juceaide
 -- Finished setting up juceaide
--- Configuring done (86.0s)
+CMake Warning at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1769 (message):
+  Target CatUiDemo has JUCE_BUNDLE_ID 'com.Studio 87.CatUiDemo', which
+  contains spaces.  Use the BUNDLE_ID option to specify a valid ID.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2165 (_juce_set_fallback_properties)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2237 (_juce_initialise_target)
+  CMakeLists.txt:31 (juce_add_gui_app)
+
+
+-- Configuring done (98.9s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/runner/work/cat-ui/cat-ui/build
 [  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
 [  6%] Building CXX object CMakeFiles/cat_ui.dir/src/CatFrame.cpp.o
-[ 10%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
-[ 13%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 10%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[ 13%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp.o
 [ 17%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
 [ 20%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
 [ 24%] Building CXX object CMakeFiles/cat_ui.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
