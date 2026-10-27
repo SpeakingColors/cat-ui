@@ -1,5 +1,5 @@
--- The C compiler identification is AppleClang 21.0.0.21000101
--- The CXX compiler identification is AppleClang 21.0.0.21000101
+-- The C compiler identification is AppleClang 17.0.0.17000013
+-- The CXX compiler identification is AppleClang 17.0.0.17000013
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Check for working C compiler: /usr/bin/cc - skipped
@@ -24,7 +24,7 @@ Call Stack (most recent call first):
   CMakeLists.txt:31 (juce_add_gui_app)
 
 
--- Configuring done (84.1s)
+-- Configuring done (42.8s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/runner/work/cat-ui/cat-ui/build
 [  3%] Building CXX object CMakeFiles/cat_ui.dir/src/CatLookAndFeel.cpp.o
@@ -44,10 +44,10 @@ Call Stack (most recent call first):
 [ 50%] Linking CXX static library libcat_ui.a
 [ 50%] Built target cat_ui
 [ 53%] Generating CatUiDemo_artefacts/JuceLibraryCode/CatUiDemo/PkgInfo
+[ 56%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
 [ 60%] Building CXX object CMakeFiles/CatUiDemo.dir/demo/Main.cpp.o
-[ 60%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
-[ 63%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
-[ 66%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+[ 63%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+[ 66%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
 [ 70%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
 [ 73%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o
 [ 76%] Building CXX object CMakeFiles/CatUiDemo.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
