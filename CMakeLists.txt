@@ -3,7 +3,7 @@ project(cat_ui VERSION 0.1.0 LANGUAGES C CXX)
 
 # cat-ui: shared look and feel for the cat plugins (JUCE).
 # Use from another project:
-#   FetchContent_Declare(cat_ui GIT_REPOSITORY https://github.com/SpeakingColors/cat-ui GIT_TAG main)
+#   FetchContent_Declare(cat_ui GIT_REPOSITORY https://github.com/SpeakingColors/cat-ui GIT_TAG c247023b9e61e1eda3de6f1da8170f08c4376501)
 #   FetchContent_MakeAvailable(cat_ui)   # after JUCE is available
 #   target_link_libraries(MyApp PRIVATE cat_ui)
 
