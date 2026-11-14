@@ -25,8 +25,8 @@ Call Stack (most recent call first):
   CMakeLists.txt:31 (juce_add_gui_app)
 
 
--- Configuring done (117.5s)
--- Generating done (0.1s)
+-- Configuring done (83.8s)
+-- Generating done (0.0s)
 CMake Warning (unused-cli):
   Manually-specified variables were not used by the project:
 
@@ -34,7 +34,7 @@ CMake Warning (unused-cli):
 
 
 -- Build files have been written to: D:/a/cat-ui/cat-ui/build
-MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+MSBuild version 18.11.1-1.26513.3+940033be3 for .NET Framework
 
   Checking File Globs
   1>Checking Build System
