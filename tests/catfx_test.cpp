@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cmath>
 #include <cstdlib>
-#include <catfx/Reverb.h>
+#include <catfx/Fx.h>
 using namespace catfx;
 static int fails = 0;
 #define CHECK(c) do { if (!(c)) { std::printf("FAIL line %d: %s\n", __LINE__, #c); ++fails; } } while (0)
@@ -66,6 +66,27 @@ int main() {
         CHECK(energy(out, 6000, 11000) < 0.001f);                            // quiet before it
         std::vector<float> second(out.begin() + 24000 + 3000, out.begin() + 24000 + 4800);   // second echo window
         { float pf2 = peakFreq(second, 300, 1500, sr); CHECK(pf2 > 800 && pf2 < 950); }
+    }
+    // 5. Rack parameter smoothing: a sudden mix change must not click.
+    //    100 Hz sine, delay of 105 ms = 10.5 cycles, so the echo is the exact opposite of the dry signal:
+    //    without smoothing a mix step from 0 to 1 would jump by about 1.0.
+    {
+        FxRack rack; rack.prepare(sr);
+        FxRackParams p; p.delayOn = true; p.delay.timeMs = 105; p.delay.feedback = 0; p.delay.shimmerAmount = 0; p.delay.dampHz = 20000; p.delay.mix = 0;
+        const int block = 64, total = 256 * block;                        // 16384 samples
+        std::vector<float> out(total);
+        for (int b = 0; b < total / block; ++b) {
+            if (b * block >= 10000) p.delay.mix = 1.0f;                   // step once the echo is established
+            std::vector<float> l(block), r(block);
+            for (int i = 0; i < block; ++i) l[i] = r[i] = 0.5f * std::sin(2 * 3.14159265f * 100.0f * float(b * block + i) / sr);
+            rack.process(l.data(), r.data(), block, p);
+            for (int i = 0; i < block; ++i) out[size_t(b * block + i)] = l[i];
+        }
+        float maxJump = 0;
+        for (size_t i = 9900; i < out.size(); ++i) maxJump = std::max(maxJump, std::fabs(out[i] - out[i - 1]));
+        CHECK(maxJump < 0.02f);                                           // sine slope is about 0.007, so this only passes if the step was smoothed
+        float lateDiff = 0; for (size_t i = 15000; i < 16000; ++i) lateDiff = std::max(lateDiff, std::fabs(out[i] + 0.5f * std::sin(2 * 3.14159265f * 100.0f * float(i) / sr)));
+        CHECK(lateDiff < 0.1f);                                           // it settled on the echo (opposite of the dry sine)
     }
     if (!fails) std::puts("reverb_test: all passed");
     return fails ? 1 : 0;
