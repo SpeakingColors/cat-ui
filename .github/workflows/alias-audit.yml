@@ -1,0 +1,25 @@
+# Builds the alias_audit tool and runs its self test (a naive tanh must measure much worse than an oversampled one).
+name: alias-audit
+on:
+  push:
+    branches: [main]
+    paths: ['tools/alias_audit/**', '.github/workflows/alias-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  selftest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Linux dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libasound2-dev libx11-dev libxinerama-dev libxext-dev libxrandr-dev libxcursor-dev libxcomposite-dev libfreetype-dev libfontconfig1-dev libgl1-mesa-dev xvfb
+      - name: Build the tool
+        run: |
+          cmake -S tools/alias_audit -B build-alias -DCMAKE_BUILD_TYPE=Release
+          cmake --build build-alias --parallel 4
+      - name: Self test
+        run: xvfb-run -a build-alias/alias_audit_artefacts/Release/alias_audit --selftest
